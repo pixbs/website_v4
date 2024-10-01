@@ -21,9 +21,16 @@ div, section, header, footer, nav {
   --brand: #F22F57;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --tile-size: 10vw;
+  }
+}
 
-
-@media (prefers-color-scheme: dark) {
+@media (min-width: 1024px) {
+  :root {
+    --tile-size: 5.56vw;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

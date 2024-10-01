@@ -12,7 +12,7 @@ export default function Hero() {
                 I focus on future-oriented methodologies such as human-centricity, and lean development.
                 </p>
                 <button className="bg-foreground text-background rounded-full h-tile w-full uppercase">
-                    <span>Let's talk</span>
+                    <span>Let&apos;s talk</span>
                 </button>
             </div>
         </section>
