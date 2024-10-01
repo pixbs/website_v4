@@ -29,7 +29,19 @@ div, section, header, footer, nav {
 
 @media (min-width: 1024px) {
   :root {
-    --tile-size: 5.56vw;
+    --tile-size: 5.556vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --tile-size: 5vw;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --tile-size: 4.167vw;
   }
 }
 
