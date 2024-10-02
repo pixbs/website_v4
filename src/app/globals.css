@@ -19,6 +19,14 @@ div, section, header, footer, nav {
   --background-secondary: #E8E8E8;
   --foreground: #161616;
   --brand: #F22F57;
+  overflow-y: overlay;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  right: 0;
+  width: 0;
 }
 
 @media (min-width: 768px) {
@@ -29,19 +37,7 @@ div, section, header, footer, nav {
 
 @media (min-width: 1024px) {
   :root {
-    --tile-size: 5.556vw;
-  }
-}
-
-@media (min-width: 1280px) {
-  :root {
-    --tile-size: 5vw;
-  }
-}
-
-@media (min-width: 1536px) {
-  :root {
-    --tile-size: 4.167vw;
+    --tile-size: 5.5555556vw;
   }
 }
 
@@ -67,8 +63,8 @@ body {
   background-color: var(--background);
 }
 
-h1 {
-  font-size: calc(var(--tile-size) / 1.5);
+.headline, h1 {
+  font-size: calc(var(--tile-size) / 2);
   line-height: var(--tile-size);
   font-weight: 600;
 }
