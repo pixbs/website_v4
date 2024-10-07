@@ -15,6 +15,7 @@ const config: Config = {
 				double: 'calc(var(--tile-size) * 2)',
 				triple: 'calc(var(--tile-size) * 3)',
 				quad: 'calc(var(--tile-size) * 4)',
+				quint: 'calc(var(--tile-size) * 5)',
 				sextuple: 'calc(var(--tile-size) * 6)',
 			},
 			colors: {

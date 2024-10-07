@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
 	return (
-		<header className='h-tile flex-row justify-between px-tile'>
+		<header className='cont-p h-tile flex-row justify-between'>
 			<Link
 				href='/'
 				className='h-tile w-tile rounded-full bg-brand'
@@ -10,7 +10,10 @@ export default function Header() {
 			/>
 			<button className='peer flex size-tile flex-col items-center justify-center gap-quarter rounded-full border border-backgroundSecondary bg-background'>
 				<span className='sr-only'>Menu</span>
-				<div className='gap-2' aria-label='Open menu'>
+				<div
+					className='items-end gap-2 peer-hover:bg-red-50 peer-focus:gap-0'
+					aria-label='Open menu'
+				>
 					<hr className='w-half peer-hover:w-quarter' />
 					<hr className='w-half' />
 					<hr className='w-quarter peer-hover:w-half' />

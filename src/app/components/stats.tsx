@@ -1,7 +1,7 @@
 export default function Stats() {
 	return (
 		<section>
-			<div className='gap-tile px-tile py-tile'>
+			<div className='cont-p gap-tile py-tile lg:flex-row'>
 				<StatsCard
 					number='90+'
 					description='Successful products created by me'
@@ -28,7 +28,7 @@ function StatsCard(props: StatsCardProps) {
 	const { number, description } = props
 	return (
 		<div className='h-quad w-full border-b border-l border-backgroundSecondary bg-background px-half'>
-			<div className='justify-center md:h-double'>
+			<div className='h-double justify-center'>
 				<h2 className='headline'>{number}</h2>
 			</div>
 			<hr className='border-backgroundSecondary' />

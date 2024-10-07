@@ -1,7 +1,7 @@
 export default function Hero() {
 	return (
 		<section>
-			<div className='hero mx-tile gap-half border-b border-foreground py-tile'>
+			<div className='mx-tile gap-half border-b border-foreground py-tile lg:mx-double'>
 				<h1>
 					Hey, Im Dimm!
 					<span className='opacity-60'>

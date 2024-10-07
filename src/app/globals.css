@@ -64,8 +64,19 @@ body {
 }
 
 .headline, h1 {
-  font-size: calc(var(--tile-size) / 2);
+  font-size: calc(var(--tile-size));
   line-height: var(--tile-size);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: calc(var(--tile-size) / 2);
+  line-height: calc(var(--tile-size));
+  font-weight: 600;
+}
+
+h3 {
+  font-size: calc(var(--tile-size)/2);
   font-weight: 600;
 }
 
@@ -77,4 +88,7 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.cont-p {
+  @apply px-tile lg:px-double;
 }
