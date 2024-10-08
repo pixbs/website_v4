@@ -1,22 +1,25 @@
+import Logo from '@/icons/logo.svg'
 import Link from 'next/link'
 
 export default function Header() {
 	return (
-		<header className='cont-p h-tile flex-row justify-between'>
+		<header className='cont-m flex-row justify-between lg:py-quarter'>
 			<Link
 				href='/'
-				className='h-tile w-tile rounded-full bg-brand'
+				className='aspect-square size-tile rounded-full bg-brand lg:size-half'
 				aria-label='Return home'
-			/>
-			<button className='peer flex size-tile flex-col items-center justify-center gap-quarter rounded-full border border-backgroundSecondary bg-background'>
+			>
+				<Logo />
+			</Link>
+			<button className='peer flex size-tile rounded-full border border-backgroundSecondary bg-background lg:size-half'>
 				<span className='sr-only'>Menu</span>
 				<div
-					className='items-end gap-2 peer-hover:bg-red-50 peer-focus:gap-0'
+					className='m-auto w-1/3 items-end gap-2 peer-hover:bg-red-50 peer-focus:gap-0'
 					aria-label='Open menu'
 				>
-					<hr className='w-half peer-hover:w-quarter' />
-					<hr className='w-half' />
-					<hr className='w-quarter peer-hover:w-half' />
+					<hr className='w-full' />
+					<hr className='w-full' />
+					<hr className='w-1/2' />
 				</div>
 			</button>
 		</header>

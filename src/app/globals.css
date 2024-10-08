@@ -88,9 +88,12 @@ h3 {
 	@apply text-third;
 }
 
-p {
-	font-size: max(14px, calc(var(--tile-size) / 4));
-	height: round(auto, var(--tile-size));
+button, p {
+	@apply text-quarter;
+}
+
+button {
+	@apply uppercase;
 }
 
 @layer utilities {
