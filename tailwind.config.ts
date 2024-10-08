@@ -24,6 +24,13 @@ const config: Config = {
 				backgroundSecondary: 'var(--background-secondary)',
 				brand: 'var(--brand)',
 			},
+			fontSize: {
+				tile: 'var(--tile-size)',
+				oneAndHalf: 'calc(var(--tile-size) / 1.5)',
+				half: 'calc(var(--tile-size) / 2)',
+				third: 'calc(var(--tile-size) / 3)',
+				quarter: 'calc(var(--tile-size) / 4)',
+			}
 		},
 	},
 	plugins: [],

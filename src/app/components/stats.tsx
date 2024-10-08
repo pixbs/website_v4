@@ -29,7 +29,7 @@ function StatsCard(props: StatsCardProps) {
 	return (
 		<div className='h-quad w-full border-b border-l border-backgroundSecondary bg-background px-half'>
 			<div className='h-double justify-center'>
-				<h2 className='headline'>{number}</h2>
+				<h2 className='text-tile'>{number}</h2>
 			</div>
 			<hr className='border-backgroundSecondary' />
 			<p className='pt-half'>{description}</p>
