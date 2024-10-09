@@ -1,9 +1,10 @@
 import ArrowTR from '@/icons/arrow-tr.svg'
+import Tiles from './tiles'
 
 export default function Hero() {
 	return (
 		<section>
-			<div className='hero cont-m hero justify-between gap-half border-b border-foreground py-tile lg:gap-tile'>
+			<div className='hero cont-m hero justify-between gap-half border-b border-foreground pb-tile pt-double lg:gap-tile'>
 				<div className='round-h flex-shrink-0'>
 					<h1>
 						Hey, Im Dimm!
@@ -30,6 +31,7 @@ export default function Hero() {
 					</button>
 				</div>
 			</div>
+			<Tiles />
 		</section>
 	)
 }

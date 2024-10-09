@@ -17,6 +17,10 @@ nav {
 	flex-direction: column;
 }
 
+section {
+	@apply relative;
+}
+
 :root {
 	--tile-size: 12.5vw;
 	--background: white;

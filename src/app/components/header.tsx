@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Header() {
 	return (
-		<header className='cont-m flex-row justify-between lg:py-quarter'>
+		<header className='cont-m absolute left-0 right-0 flex-row justify-between lg:py-quarter'>
 			<Link
 				href='/'
 				className='aspect-square size-tile rounded-full bg-brand lg:size-half'
