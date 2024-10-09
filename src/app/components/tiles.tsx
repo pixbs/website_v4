@@ -11,7 +11,9 @@ export default function Tiles() {
 		let tileSize = 0
 		const updateProximity = (event: MouseEvent) => {
 			if (!ref.current) return
-			const tiles = ref.current.querySelectorAll('.tile') as NodeListOf<HTMLElement>
+			const tiles = ref.current.querySelectorAll(
+				'.tile',
+			) as NodeListOf<HTMLElement>
 			const x = event.clientX
 			const y = event.clientY
 
@@ -22,7 +24,10 @@ export default function Tiles() {
 					Math.pow(x - rect.x - rect.width / 2, 2) +
 						Math.pow(y - rect.y - rect.height / 2, 2),
 				)
-				const radious = ref.current.clientWidth > 1000 ? ref.current.clientWidth / 7 : ref.current.clientWidth / 3
+				const radious =
+					ref.current.clientWidth > 1000
+						? ref.current.clientWidth / 7
+						: ref.current.clientWidth / 3
 				tile.style.borderRadius = `${Math.max(
 					tileSize * (1 - distance / radious),
 					0,
@@ -49,7 +54,9 @@ export default function Tiles() {
 
 		const resetProximity = () => {
 			if (!ref.current) return
-			const tiles = ref.current.querySelectorAll('.tile') as NodeListOf<HTMLElement>
+			const tiles = ref.current.querySelectorAll(
+				'.tile',
+			) as NodeListOf<HTMLElement>
 			tiles.forEach((tile) => {
 				const ttile = tile as HTMLElement
 				ttile.style.borderRadius = '0%'
@@ -71,7 +78,10 @@ export default function Tiles() {
 	}, [])
 
 	return (
-		<div className='tile-grid absolute inset-0 -z-10 flex-wrap' ref={ref}>
+		<div
+			className='tile-grid absolute inset-0 -z-10 flex-wrap'
+			ref={ref}
+		>
 			{Array.from({ length: tileAmount }).map((_, index) => (
 				<Tile key={index} />
 			))}
