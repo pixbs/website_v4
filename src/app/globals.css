@@ -23,9 +23,9 @@ section {
 
 :root {
 	--tile-size: 12.5vw;
-	--background: white;
-	--background-secondary: #e8e8e8;
-	--foreground: #161616;
+	--background: #161616;
+	--background-secondary: #2d2d2d;
+	--foreground: white;
 	--brand: #f22f57;
 	overflow-y: overlay;
 	overflow-y: scroll;
@@ -46,14 +46,6 @@ section {
 @media (min-width: 1024px) {
 	:root {
 		--tile-size: 5.5555556vw;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #161616;
-		--background-secondary: #2d2d2d;
-		--foreground: white;
 	}
 }
 
@@ -111,4 +103,13 @@ button {
 
 .cont-m {
 	@apply mx-tile lg:mx-double;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }

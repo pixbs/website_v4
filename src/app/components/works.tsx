@@ -1,5 +1,6 @@
 import { db, work } from '@/lib/schema'
 import Image from 'next/image'
+import { Suspense } from 'react'
 
 export default async function Works() {
 	const works = await db.select().from(work)
@@ -14,11 +15,13 @@ export default async function Works() {
 						centricity and lean methodology
 					</p>
 				</div>
-				<div className='w-full gap-tile'>
-					{works.map((work) => (
-						<WorkCard key={work.id} {...work} />
-					))}
-				</div>
+				<Suspense>
+					<div className='w-full gap-tile'>
+						{works.map((work) => (
+							<WorkCard key={work.id} {...work} />
+						))}
+					</div>
+				</Suspense>
 			</div>
 		</section>
 	)

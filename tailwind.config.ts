@@ -30,7 +30,21 @@ const config: Config = {
 				half: 'calc(var(--tile-size) / 2)',
 				third: 'calc(var(--tile-size) / 3)',
 				quarter: 'calc(var(--tile-size) / 4)',
-			}
+			},
+			keyframes: {
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' },
+				},
+				'move-out': {
+					'from': { transform: 'translateY(0%)' },
+					'to': { transform: 'translateY(-100%)' },
+				}
+			},
+			animation: {
+				'fade-out': 'fade-out 1s ease-in-out',
+				'move-out': 'move-out 1s ease-in-out forwards',
+			},
 		},
 	},
 	plugins: [],
