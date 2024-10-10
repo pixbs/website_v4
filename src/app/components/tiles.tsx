@@ -9,13 +9,15 @@ export default function Tiles() {
 	useEffect(() => {
 		if (!ref.current) return
 		let tileSize = 0
-		const updateProximity = (event: MouseEvent) => {
+		let x = 0
+		let y = 0
+		const isMobile = navigator.maxTouchPoints > 0
+
+		function updateProximity(x: number, y: number) {
 			if (!ref.current) return
 			const tiles = ref.current.querySelectorAll(
 				'.tile',
 			) as NodeListOf<HTMLElement>
-			const x = event.clientX
-			const y = event.clientY
 
 			tiles.forEach((tile) => {
 				if (ref.current === null) return
@@ -63,11 +65,35 @@ export default function Tiles() {
 			})
 		}
 
+		let mouseIn = false
+		function autoPlay() {
+			if (!ref.current || mouseIn) return
+			const screenWidth = ref.current.clientWidth
+			const screenHeight = ref.current.clientHeight
+			const offset = 100
+			const speed = screenWidth / 500
+			updateProximity(x, y)
+			x += speed
+			y =
+				(Math.sin(x / (screenWidth / 5)) * screenHeight) / 3 +
+				screenHeight / 2
+			if (x > screenWidth + offset) x = -offset
+			if (y > screenHeight + offset) y = -offset
+
+			requestAnimationFrame(autoPlay)
+		}
+		autoPlay()
 		calculateTileAmount()
 		window.addEventListener('resize', calculateTileAmount)
-		window.addEventListener('mousemove', updateProximity)
+		if (!isMobile) {
+			window.addEventListener('mousemove', (event) => {
+				mouseIn = true
+				updateProximity(event.clientX, event.clientY)
+			})
+		}
 		window.addEventListener('mouseout', () => {
-			resetProximity()
+			mouseIn = false
+			autoPlay()
 		})
 		return () => {
 			window.removeEventListener('resize', calculateTileAmount)
