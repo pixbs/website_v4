@@ -30,7 +30,7 @@ export default async function Works() {
 function WorkCard(props: typeof work.$inferSelect) {
 	const { image, imageAlt, title, tags, description } = props
 	return (
-		<div>
+		<div className='card'>
 			<Image
 				className='w-full'
 				src={image}

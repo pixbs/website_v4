@@ -7,7 +7,6 @@ export default function Loading() {
 					className={`h-full w-full animate-move-out border-b border-l border-backgroundSecondary bg-background ${index >= 4 && 'max-md:hidden'} ${index >= 5 && 'max-lg:hidden'}`}
 					style={{
 						animationDelay: `${index * 0.1}s`,
-						animationDuration: `${9 * 0.1}s`,
 					}}
 				/>
 			))}

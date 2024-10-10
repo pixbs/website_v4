@@ -39,12 +39,17 @@ const config: Config = {
 				'move-out': {
 					'from': { transform: 'translateY(0%)' },
 					'to': { transform: 'translateY(-100%)' },
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(-20%)' },
+					'100%': { opacity: '1', transform: 'translateY(0%)' },
 				}
 			},
 			animation: {
 				'fade-out': 'fade-out 1s ease-in-out',
-				'move-out': 'move-out 1s ease-in-out forwards',
-			},
+				'move-out': 'move-out 0.5s ease-in-out forwards',
+				'fade-in': 'fade-in 0.7s ease-in-out forwards',
+			}
 		},
 	},
 	plugins: [],

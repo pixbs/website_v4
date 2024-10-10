@@ -9,8 +9,8 @@ export default function Tiles() {
 	useEffect(() => {
 		if (!ref.current) return
 		let tileSize = 0
-		let x = 0
-		let y = 0
+		let x = -200
+		let y = -200
 		const isMobile = navigator.maxTouchPoints > 0
 
 		function updateProximity(x: number, y: number) {
@@ -82,7 +82,11 @@ export default function Tiles() {
 
 			requestAnimationFrame(autoPlay)
 		}
-		autoPlay()
+		const firstPlay = async () => {
+			await new Promise((resolve) => setTimeout(resolve, 3000))
+			autoPlay()
+		}
+		firstPlay()
 		calculateTileAmount()
 		window.addEventListener('resize', calculateTileAmount)
 		if (!isMobile) {
