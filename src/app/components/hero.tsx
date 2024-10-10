@@ -6,7 +6,8 @@ export default function Hero() {
 		<section>
 			<div className='hero cont-m justify-between gap-half border-b border-foreground pb-tile pt-double lg:gap-tile'>
 				<div className='round-h flex-shrink-0'>
-					<h1 className='animate-fade-in opacity-0'
+					<h1
+						className='animate-fade-in opacity-0'
 						style={{
 							animationDelay: '1s',
 						}}
@@ -25,7 +26,8 @@ export default function Hero() {
 					</h1>
 				</div>
 				<div className='justify-between gap-half lg:flex-row lg:items-center'>
-					<p className='lg:h-auto lg:w-sextuple animate-fade-in opacity-0'
+					<p
+						className='animate-fade-in opacity-0 lg:h-auto lg:w-sextuple'
 						style={{
 							animationDelay: '1.5s',
 						}}
@@ -33,7 +35,8 @@ export default function Hero() {
 						I focus on future-oriented methodologies such as
 						human-centricity, and lean development.
 					</p>
-					<button className='flex h-tile w-full flex-row items-center justify-center gap-half rounded-full bg-foreground uppercase text-background lg:w-quad animate-fade-in opacity-0'
+					<button
+						className='flex h-tile w-full animate-fade-in flex-row items-center justify-center gap-half rounded-full bg-foreground uppercase text-background opacity-0 lg:w-quad'
 						style={{
 							animationDelay: '2s',
 						}}
