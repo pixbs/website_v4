@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import Header from './components/header'
@@ -15,12 +17,30 @@ export const metadata: Metadata = {
 	title: title,
 	description: description,
 	openGraph: {
+		images: [
+			{
+				url: `/api/og?title=${title}`,
+				width: 1200,
+				height: 630,
+				alt: title,
+				type: 'image/png',
+			},
+		],
 		title: title,
 		description: description,
 	},
 	twitter: {
 		title: title,
 		description: description,
+		images: [
+			{
+				url: `/api/og?title=${title}`,
+				width: 1200,
+				height: 630,
+				alt: title,
+				type: 'image/png',
+			},
+		],
 	},
 	creator: 'Dimm',
 	publisher: 'Dimm',
@@ -36,6 +56,8 @@ export default function RootLayout({
 			<body className={`${onest.className} antialiased`}>
 				<Header />
 				{children}
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	)
