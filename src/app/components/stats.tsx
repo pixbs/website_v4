@@ -1,3 +1,5 @@
+import AnimatedNum from "./animated_number"
+
 export default function Stats() {
 	return (
 		<section>
@@ -12,7 +14,7 @@ export default function Stats() {
 				/>
 				<StatsCard
 					number='99%'
-					description='Client satisfaction on final work by me'
+					description='Client satisfaction of my final work.'
 				/>
 			</div>
 		</section>
@@ -29,7 +31,9 @@ function StatsCard(props: StatsCardProps) {
 	return (
 		<div className='h-quad w-full border-b border-l border-backgroundSecondary bg-background px-half'>
 			<div className='h-double justify-center'>
-				<h2 className='text-tile'>{number}</h2>
+				<h2 className='text-tile'>
+					<AnimatedNum>{number}</AnimatedNum>
+				</h2>
 			</div>
 			<hr className='border-backgroundSecondary' />
 			<p className='pt-half'>{description}</p>
