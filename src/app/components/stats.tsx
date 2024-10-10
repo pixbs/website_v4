@@ -1,4 +1,4 @@
-import AnimatedNum from "./animated_number"
+import AnimatedNum from './animated_number'
 
 export default function Stats() {
 	return (

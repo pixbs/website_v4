@@ -10,7 +10,6 @@ interface AnimatedNumProps
 export default function AnimatedNum(props: AnimatedNumProps) {
 	const ref = useRef<HTMLSpanElement>(null)
 	const { children, ...rest } = props
-	
 
 	useEffect(() => {
 		const regex = /([0-9]{1,2}(?:\.\d+)?)([^0-9]*)/g
@@ -19,14 +18,17 @@ export default function AnimatedNum(props: AnimatedNumProps) {
 		let num = 0
 		let unit = ''
 
-		const observer = new IntersectionObserver((([entry]) => {
-			if (entry.isIntersecting) {
-				num = 0
-				countUp()
-			}
-		}), {
-			threshold: 1
-		})
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					num = 0
+					countUp()
+				}
+			},
+			{
+				threshold: 1,
+			},
+		)
 
 		const countUp = () => {
 			const el = ref.current
@@ -41,13 +43,13 @@ export default function AnimatedNum(props: AnimatedNumProps) {
 		if (match && ref.current) {
 			max = parseFloat(match[1].replace(/,/g, ''))
 			unit = match[2]
-			console.log('unit ',unit, ' max ',max)
+			console.log('unit ', unit, ' max ', max)
 			ref.current.innerHTML = num.toFixed(0) + unit
 			observer.observe(ref.current)
 		}
 
 		return () => observer.disconnect()
-	}, [])
+	}, [children])
 
 	return <span {...rest} ref={ref} />
 }
