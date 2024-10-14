@@ -76,7 +76,6 @@ export function Contact() {
 						</div>
 					</div>
 					<button
-						type='reset'
 						className='flex h-tile flex-row items-center justify-center gap-7 rounded-full border border-foreground bg-background'
 					>
 						Send
