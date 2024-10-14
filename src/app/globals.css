@@ -105,10 +105,14 @@ button {
 	@apply mx-tile lg:mx-double;
 }
 
+
 input[type="text"],
 input[type="date"],
 input[type="email"] {
 	@apply bg-background appearance-none border-t-backgroundSecondary border-t border-b-2 border-b-foreground mb-quarter;
-	height: calc(var(--tile-size) / 4 * 3);
-	-webkit-appearance: none;
+	height: calc(var(--tile-size) / 4 * 3)
+}
+
+.menu-item {
+	@apply text-quarter w-full h-tile border-b border-backgroundSecondary flex items-center px-tile hover:bg-backgroundSecondary transition-colors ease-out bg-background shrink-0;
 }
