@@ -75,9 +75,7 @@ export function Contact() {
 							</div>
 						</div>
 					</div>
-					<button
-						className='flex h-tile flex-row items-center justify-center gap-7 rounded-full border border-foreground bg-background'
-					>
+					<button className='flex h-tile flex-row items-center justify-center gap-7 rounded-full border border-foreground bg-background'>
 						Send
 						<ArrowD className='size-6 stroke-2' />
 					</button>
