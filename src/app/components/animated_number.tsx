@@ -43,7 +43,6 @@ export default function AnimatedNum(props: AnimatedNumProps) {
 		if (match && ref.current) {
 			max = parseFloat(match[1].replace(/,/g, ''))
 			unit = match[2]
-			console.log('unit ', unit, ' max ', max)
 			ref.current.innerHTML = num.toFixed(0) + unit
 			observer.observe(ref.current)
 		}

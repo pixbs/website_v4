@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
+import { Contact } from './components/contact'
 import Hero from './components/hero'
 import Stats from './components/stats'
 import Loading from './loading'
+import Works from './components/works'
 
 export const metadata: Metadata = {
 	title: "Welcome to Dimm's website!",
@@ -16,7 +18,8 @@ export default function Home() {
 			<main>
 				<Hero />
 				<Stats />
-				{/* <Works /> */}
+				<Works />
+				<Contact />
 			</main>
 		</>
 	)

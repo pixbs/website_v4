@@ -32,7 +32,7 @@ function WorkCard(props: typeof work.$inferSelect) {
 	return (
 		<div className='card'>
 			<Image
-				className='w-full'
+				className='h-quad w-full lg:h-quint'
 				src={image}
 				alt={imageAlt}
 				width={400}
