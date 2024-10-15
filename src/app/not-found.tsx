@@ -10,7 +10,7 @@ export default function NotFound() {
 					<h1 className='animate-fade-in text-double opacity-0'>
 						404
 					</h1>
-					<div className='justify-between gap-half lg:flex-row lg:items-center w-full'>
+					<div className='w-full justify-between gap-half lg:flex-row lg:items-center'>
 						<p
 							className='animate-fade-in opacity-0 lg:h-auto lg:w-sextuple'
 							style={{
