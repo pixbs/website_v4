@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${onest.className} antialiased`}>
+			<body className={`${onest.className} antialiased w-screen overflow-x-hidden`}>
 				<Loader />
 				<Header />
 				{children}

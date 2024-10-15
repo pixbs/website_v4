@@ -6,11 +6,11 @@ export default function NotFound() {
 	return (
 		<main>
 			<section>
-				<div className='cont-p py-double'>
+				<div className='cont-m py-double'>
 					<h1 className='animate-fade-in text-double opacity-0'>
 						404
 					</h1>
-					<div className='justify-between gap-half lg:flex-row lg:items-center'>
+					<div className='justify-between gap-half lg:flex-row lg:items-center w-full'>
 						<p
 							className='animate-fade-in opacity-0 lg:h-auto lg:w-sextuple'
 							style={{
@@ -31,8 +31,8 @@ export default function NotFound() {
 						</Link>
 					</div>
 				</div>
+				<Tiles />
 			</section>
-			<Tiles />
 		</main>
 	)
 }

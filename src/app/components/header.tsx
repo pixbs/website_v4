@@ -60,7 +60,7 @@ function Navbar() {
 			<hr className='w-6 bg-foreground transition-all delay-100 ease-out group-hover:w-3 group-hover:translate-x-1.5 peer-checked:w-6 peer-checked:translate-x-0 peer-checked:translate-y-[0.550rem] peer-checked:rotate-45' />
 			<hr className='gr w-6 bg-foreground transition-all ease-out peer-checked:w-0' />
 			<hr className='w-3 translate-x-1.5 bg-foreground transition-all delay-100 ease-out group-hover:w-6 group-hover:translate-x-0 peer-checked:w-6 peer-checked:-translate-y-[0.550rem] peer-checked:translate-x-0 peer-checked:-rotate-45' />
-			<nav className='absolute -right-[200vw] top-0 h-screen w-screen pt-tile transition-all duration-700 ease-out peer-checked:-right-tile'>
+			<nav className='absolute -right-[200vw] top-0 h-dvh w-screen pt-tile transition-all duration-700 ease-out peer-checked:-right-tile'>
 				<Link href='/about' className='menu-item'>
 					About
 					<ArrowR className='mr-third size-third' />
