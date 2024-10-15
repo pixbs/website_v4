@@ -1,6 +1,6 @@
 import ArrowR from '@/icons/arrow-r.svg'
 import Link from 'next/link'
-import Tiles from './components/tiles'
+import Tiles from '../components/tiles'
 
 export default function NotFound() {
 	return (

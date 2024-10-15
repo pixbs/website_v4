@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
-import { Contact } from './components/contact'
-import Hero from './components/hero'
-import Stats from './components/stats'
-import Works from './components/works'
+import { Contact } from '../components/contact'
+import Hero from '../components/hero'
+import Stats from '../components/stats'
+import Works from '../components/works'
 
 export const metadata: Metadata = {
 	title: "Welcome to Dimm's website!",
