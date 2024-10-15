@@ -122,7 +122,7 @@ export default function Tiles() {
 const Tile = () => {
 	return (
 		<div className={`relative size-tile bg-brand`}>
-			<div className='tile absolute inset-0 border-r border-t border-backgroundSecondary bg-background' />
+			<div className='tile absolute inset-0 border-l border-t border-backgroundSecondary bg-background' />
 		</div>
 	)
 }

@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { Contact } from './components/contact'
 import Hero from './components/hero'
 import Stats from './components/stats'
-import Loading from './loading'
 import Works from './components/works'
 
 export const metadata: Metadata = {
@@ -13,14 +12,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<>
-			<Loading />
 			<main>
 				<Hero />
 				<Stats />
 				<Works />
 				<Contact />
 			</main>
-		</>
 	)
 }

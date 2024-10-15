@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import Header from './components/header'
 import './globals.css'
-import Loading from './loading'
+import Loader from './loader'
 
 const onest = Onest({
 	subsets: ['latin'],
@@ -55,7 +55,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${onest.className} antialiased`}>
-				<Loading />
+				<Loader />
 				<Header />
 				{children}
 				<SpeedInsights />
