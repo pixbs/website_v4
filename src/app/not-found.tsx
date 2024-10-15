@@ -7,7 +7,9 @@ export default function NotFound() {
 		<main>
 			<section>
 				<div className='cont-p py-double'>
-					<h1 className='animate-fade-in opacity-0 text-double'>404</h1>
+					<h1 className='animate-fade-in text-double opacity-0'>
+						404
+					</h1>
 					<div className='justify-between gap-half lg:flex-row lg:items-center'>
 						<p
 							className='animate-fade-in opacity-0 lg:h-auto lg:w-sextuple'
@@ -17,8 +19,9 @@ export default function NotFound() {
 						>
 							Sorry page you looking for is not found.
 						</p>
-						<Link href='/'
-							className='flex h-tile text-quarter w-full animate-fade-in flex-row items-center justify-center gap-half rounded-full bg-foreground uppercase text-background opacity-0 lg:w-quad'
+						<Link
+							href='/'
+							className='flex h-tile w-full animate-fade-in flex-row items-center justify-center gap-half rounded-full bg-foreground text-quarter uppercase text-background opacity-0 lg:w-quad'
 							style={{
 								animationDelay: '1s',
 							}}

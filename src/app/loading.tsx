@@ -1,5 +1,3 @@
 export default function Loading() {
-	return (
-		<div className="w-screen h-screen bg-[#111]"></div>
-	)
+	return <div className='h-screen w-screen bg-[#111]'></div>
 }
