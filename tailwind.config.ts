@@ -11,6 +11,7 @@ const config: Config = {
 			spacing: {
 				tile: 'var(--tile-size)',
 				half: 'calc(var(--tile-size) / 2)',
+				third: 'calc(var(--tile-size) / 3)',
 				quarter: 'calc(var(--tile-size) / 4)',
 				double: 'calc(var(--tile-size) * 2)',
 				triple: 'calc(var(--tile-size) * 3)',

@@ -114,5 +114,5 @@ input[type="email"] {
 }
 
 .menu-item {
-	@apply text-quarter w-full h-tile border-b border-backgroundSecondary flex items-center px-tile hover:bg-backgroundSecondary transition-colors ease-out bg-background shrink-0;
+	@apply text-third w-full h-tile border-b border-backgroundSecondary flex items-center px-tile hover:bg-backgroundSecondary transition-colors ease-out bg-background shrink-0 justify-between;
 }

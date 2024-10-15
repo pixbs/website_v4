@@ -25,6 +25,7 @@ export function Contact() {
 							name='ip'
 							className='hidden'
 							value={headersList.get('x-forwarded-for') ?? ''}
+							readOnly
 						/>
 						<div className='w-full'>
 							<label htmlFor='name' className='sr-only'>
