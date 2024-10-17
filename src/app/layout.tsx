@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import { Suspense } from 'react'
 import Header from '../components/header'
 import './globals.css'
 import Loader from './loader'
@@ -60,8 +61,10 @@ export default function RootLayout({
 				<Loader />
 				<Header />
 				{children}
-				<SpeedInsights />
-				<Analytics />
+				<Suspense>
+					<SpeedInsights />
+					<Analytics />
+				</Suspense>
 			</body>
 		</html>
 	)
