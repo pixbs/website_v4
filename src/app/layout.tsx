@@ -2,6 +2,7 @@ import { PHProvider } from '@/lib/posthog'
 import PostHogPageView from '@/lib/posthog-page-view'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
 
 const onest = Onest({
@@ -24,7 +25,9 @@ export default function RootLayout({
 		<html lang='en'>
 			<PHProvider>
 				<body className={`${onest.className} antialiased`}>
-					<PostHogPageView />
+          <Suspense>
+					  <PostHogPageView />
+          </Suspense>
 					<main>{children}</main>
 				</body>
 			</PHProvider>
