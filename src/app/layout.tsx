@@ -1,8 +1,5 @@
-import { PHProvider } from '@/lib/posthog'
-import PostHogPageView from '@/lib/posthog-page-view'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
-import { Suspense } from 'react'
 import './globals.css'
 
 const onest = Onest({
@@ -13,7 +10,7 @@ export const metadata: Metadata = {
 	title:
 		'Dimm Kyselov | UI/UX Designer & Software Engineer Site Portfolio',
 	description:
-		'Dimm Kyselov is a UI/UX Designer & Software Engineer based in Kyiv, Ukraine. He specializes in creating user interfaces and experiences for web and mobile applications.',
+		'Dimm Kyselov is a UI/UX Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
 }
 
 export default function RootLayout({
@@ -23,14 +20,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<PHProvider>
-				<body className={`${onest.className} antialiased`}>
-          <Suspense>
-					  <PostHogPageView />
-          </Suspense>
-					<main>{children}</main>
-				</body>
-			</PHProvider>
+			<body
+				className={`${onest.className} bg-gray-600 text-white bg-background antialiased tile-stroke`}
+			>
+				<main>{children}</main>
+			</body>
 		</html>
 	)
 }
