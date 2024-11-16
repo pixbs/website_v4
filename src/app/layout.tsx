@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import Header from 'sections/header'
 import './globals.css'
 
 const onest = Onest({
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 		'Dimm Kyselov is a UI/UX Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
 }
 
-export default function RootLayout({
+function RootLayout({
 	children,
 }: {
 	children: React.ReactNode
@@ -21,10 +22,13 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${onest.className} bg-gray-600 text-white bg-background antialiased tile-stroke`}
+				className={`${onest.className} bg-background-sec antialiased`}
 			>
+				<Header />
 				<main>{children}</main>
 			</body>
 		</html>
 	)
 }
+
+export default RootLayout

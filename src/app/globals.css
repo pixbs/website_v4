@@ -4,16 +4,23 @@
 
 @layer base {
 	h1 {
-		@apply text-oneAndHalf;
+		@apply text-oneAndHalf font-bold;
 	}
 	h2 {
-		@apply text-half;
+		@apply text-half font-bold;
 	}
 	h3 {
-		@apply text-third;
+		@apply text-third font-bold;
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+	div,
+	main,
+	section,
+	header,
+	footer {
+		@apply flex flex-col;
 	}
 }
 
