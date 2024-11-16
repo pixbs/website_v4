@@ -4,8 +4,8 @@ import Link from 'next/link'
 function Header() {
 	const links = [
 		{ href: '/', label: 'About' },
-		{ href: '/', label: 'Projects' },
-		{ href: '/', label: 'Contact' },
+		{ href: '/', label: 'Work' },
+		{ href: '/', label: 'Services' },
 	]
 	return (
 		<header className='h-tile px-tile fixed left-0 right-0 flex-row items-center justify-between'>
