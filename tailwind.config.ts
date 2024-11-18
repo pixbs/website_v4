@@ -31,14 +31,6 @@ export default {
 			'background-sec': '#111111',
 			brand: '#F22F57',
 		},
-		fontSize: {
-			tile: 'var(--tile-size)',
-			oneAndHalf: 'calc(var(--tile-size) / 1.5)',
-			half: 'calc(var(--tile-size) / 2)',
-			third: 'calc(var(--tile-size) / 3)',
-			quarter: 'calc(var(--tile-size) / 4)',
-			double: 'calc(var(--tile-size) * 2)',
-		},
 		extend: {
 			spacing: {
 				tile: 'var(--tile-size)',
@@ -50,6 +42,14 @@ export default {
 				quad: 'calc(var(--tile-size) * 4)',
 				quint: 'calc(var(--tile-size) * 5)',
 				sextuple: 'calc(var(--tile-size) * 6)',
+			},
+			fontSize: {
+				tile: 'var(--tile-size)',
+				oneAndHalf: 'calc(var(--tile-size) / 1.5)',
+				half: 'calc(var(--tile-size) / 2)',
+				third: 'calc(var(--tile-size) / 3)',
+				quarter: 'calc(var(--tile-size) / 4)',
+				double: 'calc(var(--tile-size) * 2)',
 			},
 		},
 	},

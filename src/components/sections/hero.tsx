@@ -1,4 +1,5 @@
-import ArrowTR from '@/icons/arrow-tr.svg'
+import ArrowTR from '@/icons/base/arrow-tr.svg'
+import Social from 'elements/social'
 import Link from 'next/link'
 import { UrlObject } from 'url'
 
@@ -20,17 +21,35 @@ function Hero({
 			<div className='gap-tile'>
 				<h1 className='text-balance'>{title}</h1>
 				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
-					<p className='max-w-sextuple'>{description}</p>
-					<Link
-						href={buttonLink || '/'}
-						className='w-quad border-stroke h-tile gap-third flex shrink-0 flex-row items-center justify-center rounded-full border bg-background font-semibold uppercase'
-					>
-						{buttonText}
-						<ArrowTR className='size-third' />
-					</Link>
+					<p className='max-w-sextuple min-h-tile flex items-center'>
+						{description}
+					</p>
+					{buttonText ? (
+						<CTA
+							buttonText={buttonText}
+							buttonLink={buttonLink}
+						/>
+					) : (
+						<Social />
+					)}
 				</div>
 			</div>
 		</section>
+	)
+}
+
+function CTA({
+	buttonLink,
+	buttonText,
+}: Pick<HeroProps, 'buttonLink' | 'buttonText'>) {
+	return (
+		<Link
+			href={buttonLink || '/'}
+			className='w-quad border-stroke h-tile gap-third flex shrink-0 flex-row items-center justify-center rounded-full border bg-background font-semibold uppercase'
+		>
+			{buttonText}
+			<ArrowTR className='size-third' />
+		</Link>
 	)
 }
 

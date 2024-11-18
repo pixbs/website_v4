@@ -13,14 +13,10 @@ function Home() {
 			</span>
 		</>
 	)
+	const description =
+		'I specialize in creating user interfaces and experiences for web and mobile applications. based on human-centric and lean principles.'
 
-	return (
-		<Hero
-			title={title}
-			description='I specialize in creating user interfaces and experiences for web and mobile applications. I am passionate about creating beautiful and functional designs that are accessible to everyone.'
-			buttonText="Let's talk"
-		/>
-	)
+	return <Hero title={title} description={description} />
 }
 
 export default Home
