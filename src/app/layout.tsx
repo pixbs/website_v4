@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import Footer from 'sections/footer'
 import Header from 'sections/header'
 import './globals.css'
 
@@ -26,6 +27,7 @@ function RootLayout({
 			>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)

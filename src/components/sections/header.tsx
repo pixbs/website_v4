@@ -8,7 +8,7 @@ function Header() {
 		{ href: '/', label: 'Services' },
 	]
 	return (
-		<header className='h-tile px-tile fixed left-0 right-0 flex-row items-center justify-between'>
+		<header className='h-tile px-tile fixed left-0 right-0 flex-row items-center justify-between z-20'>
 			<Link href='/'>
 				<Image
 					src='/logo.svg'
@@ -29,7 +29,7 @@ function Header() {
 					</Link>
 				))}
 			</div>
-			<button className='size-tile border-stroke md:size-half flex items-center justify-center rounded-full border'>
+			<button className='size-tile border-stroke md:size-half flex items-center justify-center rounded-full border bg-background'>
 				<div className='size-1/3 items-end justify-between'>
 					<hr className='w-full border-t-foreground' />
 					<hr className='w-full border-t-foreground' />
