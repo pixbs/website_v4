@@ -17,7 +17,7 @@ function Hero({
 	buttonLink,
 }: HeroProps) {
 	return (
-		<section className='px-tile py-double tile-stroke bg-background'>
+		<section className='px-tile pt-double pb-tile tile-stroke bg-background'>
 			<div className='gap-tile'>
 				<h1 className='text-balance'>{title}</h1>
 				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>

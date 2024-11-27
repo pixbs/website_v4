@@ -25,7 +25,7 @@ function RootLayout({
 				className={`${onest.className} bg-background-sec antialiased`}
 			>
 				<Header />
-				<main>{children}</main>
+				{children}
 			</body>
 		</html>
 	)

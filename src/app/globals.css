@@ -27,6 +27,12 @@
 	}
 }
 
+::-webkit-scrollbar {
+	position: absolute;
+	right: 0;
+	width: 0;
+}
+
 :root {
 	--tile-size: 12.5vw;
 }
