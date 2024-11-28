@@ -24,6 +24,7 @@ function Expertise({
 				Show more services
 				<ArrowTR className='size-third' />
 			</Link>
+			<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground' />
 		</section>
 	)
 }

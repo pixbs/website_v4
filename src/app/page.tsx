@@ -4,7 +4,7 @@ import Hero from 'sections/hero'
 
 function Home() {
 	return (
-		<main>
+		<>
 			<Hero
 				title={
 					<>
@@ -41,7 +41,7 @@ function Home() {
 					description='I create mobile applications that are easy to use and visually appealing.'
 				/>
 			</Expertise>
-		</main>
+		</>
 	)
 }
 

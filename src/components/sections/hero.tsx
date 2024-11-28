@@ -17,23 +17,22 @@ function Hero({
 	buttonLink,
 }: HeroProps) {
 	return (
-		<section className='px-tile pt-double pb-tile tile-stroke bg-background'>
-			<div className='gap-tile'>
-				<h1 className='text-balance'>{title}</h1>
-				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
-					<p className='max-w-sextuple min-h-tile flex items-center'>
-						{description}
-					</p>
-					{buttonText ? (
-						<CTA
-							buttonText={buttonText}
-							buttonLink={buttonLink}
-						/>
-					) : (
-						<Social />
-					)}
-				</div>
+		<section className='px-tile pt-double pb-tile tile-stroke bg-background relative gap-tile'>
+			<h1 className='text-balance'>{title}</h1>
+			<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
+				<p className='max-w-sextuple min-h-tile flex items-center'>
+					{description}
+				</p>
+				{buttonText ? (
+					<CTA
+						buttonText={buttonText}
+						buttonLink={buttonLink}
+					/>
+				) : (
+					<Social />
+				)}
 			</div>
+			<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground' />
 		</section>
 	)
 }
