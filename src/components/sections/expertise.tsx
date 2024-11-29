@@ -3,14 +3,14 @@ import Link from 'next/link'
 import Headline from '../elements/headline'
 
 interface ExpertiseProps {
-	title: React.ReactNode
+	title?: React.ReactNode
 	description?: React.ReactNode
 	children?: React.ReactNode
 }
 
 function Expertise({
-	title,
-	description,
+	title = 'Expertise',
+	description = 'My focus is on creating meaningful and delightful digital experiences. I have a passion for design systems, user interfaces, and user experience design.',
 	children,
 }: ExpertiseProps) {
 	return (
