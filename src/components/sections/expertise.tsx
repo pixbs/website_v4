@@ -14,7 +14,7 @@ function Expertise({
 	children,
 }: ExpertiseProps) {
 	return (
-		<section className='px-tile py-tile tile-stroke bg-background'>
+		<section className='px-tile py-tile tile-stroke bg-background relative'>
 			<Headline title={title} description={description} />
 			<div className='flex-row flex-wrap'>{children}</div>
 			<Link

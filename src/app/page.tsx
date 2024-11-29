@@ -1,4 +1,5 @@
 import ServiceCard from 'elements/services-card'
+import Contact from 'sections/contact'
 import Expertise from 'sections/expertise'
 import Hero from 'sections/hero'
 
@@ -24,6 +25,7 @@ function Home() {
 					description='I create mobile applications that are easy to use and visually appealing.'
 				/>
 			</Expertise>
+			<Contact />
 		</>
 	)
 }

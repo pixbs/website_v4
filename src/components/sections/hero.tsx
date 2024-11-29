@@ -43,7 +43,7 @@ function Hero({
 					<Social />
 				)}
 			</div>
-			<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground' />
+			<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground z-[2]' />
 		</section>
 	)
 }

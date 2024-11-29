@@ -25,6 +25,11 @@
 	footer {
 		@apply flex flex-col;
 	}
+	input[type='text'],
+	input[type='email'] {
+		@apply bg-background appearance-none border-t-stroke border-t border-b-2 border-b-foreground mb-quarter;
+		height: calc(var(--tile-size) / 4 * 3);
+	}
 }
 
 ::-webkit-scrollbar {
