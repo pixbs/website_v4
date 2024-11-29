@@ -1,13 +1,22 @@
 interface HeadlineProps {
 	title: React.ReactNode
 	description?: React.ReactNode
+	className?: string
 }
 
-function Headline({ title, description }: HeadlineProps) {
+function Headline({
+	title,
+	description,
+	className,
+}: HeadlineProps) {
 	return (
-		<div className='mb-tile lg:flex-row justify-between lg:items-center min-h-tile gap-half'>
+		<div
+			className={`mb-half lg:mb-tile lg:flex-row justify-between lg:items-center min-h-tile gap-half ${className}`}
+		>
 			<h2 className=''>{title}</h2>
-			<p className='lg:w-sextuple'>{description}</p>
+			<p className='lg:w-sextuple h-double lg:h-auto'>
+				{description}
+			</p>
 		</div>
 	)
 }

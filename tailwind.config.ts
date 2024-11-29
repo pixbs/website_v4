@@ -51,6 +51,10 @@ export default {
 				quarter: 'calc(var(--tile-size) / 4)',
 				double: 'calc(var(--tile-size) * 2)',
 			},
+			lineHeight: {
+				tile: 'var(--tile-size)',
+				half: 'calc(var(--tile-size) / 2)',
+			},
 		},
 	},
 	plugins: [tileGridPlugin],

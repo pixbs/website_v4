@@ -31,7 +31,7 @@ function Hero({
 		<section className='px-tile pt-double pb-tile tile-stroke bg-background relative gap-tile'>
 			<h1 className='text-balance'>{title}</h1>
 			<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
-				<p className='max-w-sextuple min-h-tile flex items-center'>
+				<p className='max-w-sextuple min-h-tile flex items-center h-quad lg:h-auto '>
 					{description}
 				</p>
 				{buttonText ? (

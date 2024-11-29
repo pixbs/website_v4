@@ -14,11 +14,14 @@ function Contact({
 	description = "Have a project in mind or just want to say hi? I'd love to hear from you.",
 }: ContactProps) {
 	return (
-		<section id='contact' className='p-tile'>
+		<section
+			id='contact'
+			className='p-tile tile-stroke bg-background'
+		>
 			<Headline {...{ title, description }} />
 			<form className='flex flex-col' action={formAction}>
 				<div className='lg:flex-row gap-tile'>
-					<div className='w-full lg:w-sextuple shrink-0'>
+					<div className='w-full lg:w-full'>
 						<Input type='text' required max='16' id='name'>
 							Your name*
 						</Input>
@@ -29,8 +32,8 @@ function Contact({
 							A sentence what is it about
 						</Input>
 					</div>
-					<div className='w-full flex-wrap'>
-						<p className='h-half text-quarter'>
+					<div className='w-sextuple shrink-0 flex-wrap'>
+						<p className='h-half text-quarter leading-half'>
 							Im interested in:
 						</p>
 						<div className='flex-row flex-wrap gap-2'>
