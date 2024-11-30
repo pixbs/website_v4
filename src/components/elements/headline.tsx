@@ -14,7 +14,7 @@ function Headline({
 			className={`mb-half lg:mb-tile lg:flex-row justify-between lg:items-center min-h-tile gap-half ${className}`}
 		>
 			<h2 className=''>{title}</h2>
-			<p className='lg:w-sextuple h-double lg:h-auto'>
+			<p className='lg:w-sextuple h-oneAndHalf lg:h-auto'>
 				{description}
 			</p>
 		</div>

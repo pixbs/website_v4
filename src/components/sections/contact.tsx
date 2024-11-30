@@ -20,7 +20,7 @@ function Contact({
 		>
 			<Headline {...{ title, description }} />
 			<form className='flex flex-col' action={formAction}>
-				<div className='lg:flex-row gap-tile'>
+				<div className='lg:flex-row gap-half lg:gap-tile pb-half lg:pb-0'>
 					<div className='w-full lg:w-full'>
 						<Input type='text' required max='16' id='name'>
 							Your name*
@@ -95,7 +95,7 @@ function Chip(
 			/>
 			<label
 				htmlFor={props.id}
-				className='rounded-full border border-backgroundSecondary bg-background px-5 py-2 font-semibold uppercase transition-colors ease-in-out hover:border-foreground peer-checked:border-brand peer-checked:bg-brand peer-checked:text-background'
+				className='rounded-full border border-backgroundSecondary bg-background px-5 py-2 font-semibold uppercase transition-colors ease-in-out hover:border-foreground peer-checked:border-brand peer-checked:bg-brand peer-checked:text-background leading-half lg:leading-quarter'
 			>
 				{children}
 			</label>

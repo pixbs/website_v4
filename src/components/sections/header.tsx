@@ -23,7 +23,7 @@ function Header() {
 					<Link
 						key={index}
 						href={href}
-						className='hover:bg-stroke flex size-full items-center justify-center rounded-full font-semibold uppercase'
+						className='hover:bg-stroke flex size-full items-center justify-center rounded-full font-semibold uppercase text-base'
 					>
 						{label}
 					</Link>

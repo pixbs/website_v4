@@ -14,12 +14,12 @@ function Hero({
 	title = (
 		<>
 			Hey, I&apos;m Dimm!{' '}
-			<span className='text-foreground-sec'>
-				Software Engineer
+			<span className='text-foreground/50'>
+				Product Designer
 			</span>{' '}
 			and{' '}
-			<span className='text-foreground-sec'>
-				UI/UX designer
+			<span className='text-foreground/50'>
+				Software Engineer
 			</span>
 		</>
 	),

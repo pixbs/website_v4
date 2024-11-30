@@ -12,8 +12,9 @@
 	h3 {
 		@apply text-third font-bold;
 	}
-	p {
-		@apply lg:text-xl;
+	p,
+	a {
+		@apply text-fifth;
 	}
 	body {
 		@apply bg-background text-foreground;
@@ -50,4 +51,8 @@
 	:root {
 		--tile-size: 5.5555556vw;
 	}
+}
+
+::selection {
+	@apply bg-brand text-background;
 }

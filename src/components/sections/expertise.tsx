@@ -10,7 +10,7 @@ interface ExpertiseProps {
 
 function Expertise({
 	title = 'Expertise',
-	description = 'My focus is on creating meaningful and delightful digital experiences. I have a passion for design systems, user interfaces, and user experience design.',
+	description = 'My focus is on creating meaningful and delightful digital experiences.',
 	children,
 }: ExpertiseProps) {
 	return (
