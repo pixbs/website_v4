@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Headline from '../elements/headline'
 
 interface ExpertiseProps {
-	title?: React.ReactNode
-	description?: React.ReactNode
+	title?: string
+	description?: string
 	children?: React.ReactNode
 }
 

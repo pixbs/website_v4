@@ -5,8 +5,8 @@ import { redirect } from 'next/navigation'
 import Headline from '../elements/headline'
 
 interface ContactProps {
-	title?: React.ReactNode
-	description?: React.ReactNode
+	title?: string
+	description?: string
 }
 
 function Contact({

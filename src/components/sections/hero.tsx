@@ -2,48 +2,42 @@ import ArrowTR from '@/icons/base/arrow-tr.svg'
 import Social from 'elements/social'
 import Link from 'next/link'
 import { UrlObject } from 'url'
+import StaggeredText from '../animated/text'
 
 interface HeroProps {
-	title?: React.ReactNode
+	title?: string
 	description?: React.ReactNode
 	buttonText?: React.ReactNode
 	buttonLink?: string | UrlObject
 }
 
 function Hero({
-	title = (
-		<>
-			Hey, I&apos;m Dimm!{' '}
-			<span className='text-foreground/50'>
-				Product Designer
-			</span>{' '}
-			and{' '}
-			<span className='text-foreground/50'>
-				Software Engineer
-			</span>
-		</>
-	),
+	title = 'Hey, I’m Dimm! a Product Designer based in Berlin, Germany.',
 	description = 'I specialize in creating user interfaces and experiences for web and mobile applications. based on human-centric and lean principles.',
 	buttonText,
 	buttonLink,
 }: HeroProps) {
 	return (
 		<section className='px-tile pt-double pb-tile tile-stroke bg-background relative gap-tile'>
-			<h1 className='text-balance'>{title}</h1>
-			<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
-				<p className='max-w-sextuple min-h-tile flex items-center h-quad lg:h-auto '>
-					{description}
-				</p>
-				{buttonText ? (
-					<CTA
-						buttonText={buttonText}
-						buttonLink={buttonLink}
-					/>
-				) : (
-					<Social />
-				)}
+			<div className='gap-tile z-10'>
+				<h1 className='text-balance'>
+					<StaggeredText>{title}</StaggeredText>
+				</h1>
+				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
+					<p className='max-w-sextuple min-h-tile flex items-center h-quad lg:h-auto '>
+						{description}
+					</p>
+					{buttonText ? (
+						<CTA
+							buttonText={buttonText}
+							buttonLink={buttonLink}
+						/>
+					) : (
+						<Social />
+					)}
+				</div>
+				<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground z-[2]' />
 			</div>
-			<hr className=' absolute -bottom-[1px] left-tile right-tile border-foreground z-[2]' />
 		</section>
 	)
 }
