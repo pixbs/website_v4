@@ -26,7 +26,7 @@ function RootLayout({
 				className={`${onest.className} bg-background-sec antialiased`}
 			>
 				<Header />
-				<main className='relative z-[1] tile-stroke bg-background'>
+				<main className='relative z-[1] tile-stroke bg-background min-h-screen'>
 					{children}
 				</main>
 				<Footer />
