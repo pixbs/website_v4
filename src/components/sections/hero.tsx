@@ -6,7 +6,7 @@ import { UrlObject } from 'url'
 import StaggeredText from '../animated/text'
 
 interface HeroProps {
-	title?: string
+	title?: React.ReactNode
 	description?: string
 	buttonText?: React.ReactNode
 	buttonLink?: string | UrlObject
@@ -23,7 +23,11 @@ function Hero({
 			<Tiles />
 			<div className='gap-tile z-10'>
 				<h1 className='text-balance'>
-					<StaggeredText>{title}</StaggeredText>
+					{typeof title === 'string' ? (
+						<StaggeredText>{title}</StaggeredText>
+					) : (
+						title
+					)}
 				</h1>
 				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
 					<p className='max-w-sextuple min-h-tile flex items-center h-quad lg:h-auto '>

@@ -1,3 +1,4 @@
+import StaggeredText from '@/components/animated/text'
 import ServiceCard from 'elements/services-card'
 import Contact from 'sections/contact'
 import Expertise from 'sections/expertise'
@@ -6,7 +7,26 @@ import Hero from 'sections/hero'
 function Home() {
 	return (
 		<>
-			<Hero />
+			<Hero
+				title={
+					<>
+						<StaggeredText>Hey, I’m Dimm! a</StaggeredText>
+						<StaggeredText
+							className='text-foreground/50'
+							delay={0.25}
+						>
+							Product Designer
+						</StaggeredText>
+						<StaggeredText delay={0.5}>based in</StaggeredText>
+						<StaggeredText
+							className='text-foreground/50'
+							delay={0.8}
+						>
+							Berlin, Germany.
+						</StaggeredText>
+					</>
+				}
+			/>
 			<Expertise>
 				<ServiceCard
 					title='UI/UX Design'

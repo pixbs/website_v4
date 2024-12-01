@@ -5,12 +5,14 @@ interface StaggeredTextProps {
 	delay?: number
 	duration?: number
 	children?: string
+	className?: string
 }
 
 function StaggeredText({
 	children = '',
 	delay = 0,
 	duration = 1,
+	className = '',
 }: StaggeredTextProps) {
 	const defaultAnimations = {
 		hidden: {
@@ -26,14 +28,16 @@ function StaggeredText({
 	return (
 		<>
 			<span className='sr-only'>{children}</span>
-			<motion.span className='aria-hidden:* overflow-clip'>
+			<motion.span
+				className={`aria-hidden:* overflow-clip ${className}`}
+			>
 				{children.split(' ').map((word, index) => (
 					<motion.span
 						initial='hidden'
 						whileInView='visible'
 						viewport={{ once: true }}
 						transition={{
-							staggerChildren: 0.005,
+							staggerChildren: 0.01 * duration,
 							delayChildren: index * 0.05 + delay,
 						}}
 						key={`${index}-word`}
