@@ -1,17 +1,25 @@
 'use client'
 import { motion } from 'motion/react'
 
-interface AnimatedTextProps {
-	children: string
+interface StaggeredTextProps {
+	delay?: number
+	duration?: number
+	children?: string
 }
 
-function StaggeredText({ children }: AnimatedTextProps) {
+function StaggeredText({
+	children = '',
+	delay = 0,
+	duration = 1,
+}: StaggeredTextProps) {
 	const defaultAnimations = {
 		hidden: {
-			translateY: '-100%',
+			opacity: 0.2,
+			y: '100%',
 		},
 		visible: {
-			translateY: '0%',
+			opacity: 1,
+			y: '0%',
 		},
 	}
 
@@ -25,18 +33,21 @@ function StaggeredText({ children }: AnimatedTextProps) {
 						whileInView='visible'
 						viewport={{ once: true }}
 						transition={{
-							staggerChildren: 0.05,
-							delayChildren: index * 0.15,
+							staggerChildren: 0.005,
+							delayChildren: index * 0.05 + delay,
 						}}
 						key={`${index}-word`}
-						className='inline-block relative overflow-hidden'
+						className='inline-block overflow-clip'
 					>
 						{word.split('').map((char, index) => (
 							<motion.span
 								variants={defaultAnimations}
-								transition={{ ease: 'easeInOut' }}
+								transition={{
+									ease: 'easeInOut',
+									duration: duration,
+								}}
 								key={index}
-								className='inline-block text-nowrap relative'
+								className='inline-block text-nowrap'
 							>
 								{char}
 							</motion.span>

@@ -6,7 +6,7 @@ import StaggeredText from '../animated/text'
 
 interface HeroProps {
 	title?: string
-	description?: React.ReactNode
+	description?: string
 	buttonText?: React.ReactNode
 	buttonLink?: string | UrlObject
 }
@@ -25,7 +25,9 @@ function Hero({
 				</h1>
 				<div className='min-h-tile gap-tile items-center justify-between md:flex-row'>
 					<p className='max-w-sextuple min-h-tile flex items-center h-quad lg:h-auto '>
-						{description}
+						<StaggeredText duration={0.5} delay={0.5}>
+							{description}
+						</StaggeredText>
 					</p>
 					{buttonText ? (
 						<CTA
