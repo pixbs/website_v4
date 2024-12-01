@@ -1,5 +1,6 @@
 import ArrowTR from '@/icons/base/arrow-tr.svg'
 import Social from 'elements/social'
+import Tiles from 'elements/tiles'
 import Link from 'next/link'
 import { UrlObject } from 'url'
 import StaggeredText from '../animated/text'
@@ -18,7 +19,8 @@ function Hero({
 	buttonLink,
 }: HeroProps) {
 	return (
-		<section className='px-tile pt-double pb-tile tile-stroke bg-background relative gap-tile'>
+		<section className='px-tile pt-double pb-tile relative gap-tile tile-stroke bg-background'>
+			<Tiles />
 			<div className='gap-tile z-10'>
 				<h1 className='text-balance'>
 					<StaggeredText>{title}</StaggeredText>
