@@ -1,5 +1,6 @@
 import { sql as vercelSQL } from '@vercel/postgres'
 import {
+	index,
 	pgEnum,
 	pgTable,
 	serial,
@@ -12,41 +13,33 @@ export const db = drizzle(vercelSQL)
 
 export const tagsEnum = pgEnum('tags', [
 	'web',
-	'mobile',
+	'app',
 	'design',
 	'research',
-	'backend',
-	'frontend',
-	'ux',
-	'ui',
+	'development',
 	'other',
 ])
 
-export const work = pgTable('work', {
-	id: serial('id').primaryKey(),
-	image: text('image').notNull(),
-	imageAlt: text('imageAlt').notNull(),
-	title: text('title').notNull(),
-	slug: text('slug'),
-	tags: tagsEnum('tags').array().notNull(),
-	description: text('description'),
-	createdAt: timestamp('created_at').defaultNow(),
-})
-
-export const services = pgTable('services', {
-	id: serial('id').primaryKey(),
-	title: text('title').notNull(),
-	slug: text('slug'),
-	description: text('description').notNull(),
-	createdAt: timestamp('created_at').defaultNow(),
-})
-
-export const contact = pgTable('contact', {
-	id: serial('id').primaryKey(),
-	userIp: text('ip'),
-	name: text('name').notNull(),
-	email: text('email').notNull(),
-	subject: text('subject'),
-	tags: tagsEnum('tags').array(),
-	createdAt: timestamp('created_at').defaultNow(),
-})
+export const work = pgTable(
+	'work',
+	{
+		id: serial('id').primaryKey(),
+		image: text('image').notNull(),
+		imageAlt: text('imageAlt').notNull(),
+		backgroundImage: text('background_image'),
+		color: text('color'),
+		name: text('title').notNull(),
+		slug: text('slug').notNull(),
+		link: text('link'),
+		tags: tagsEnum('tags').array().notNull(),
+		year: text('year').notNull(),
+		description: text('description'),
+		createdAt: timestamp('created_at').defaultNow(),
+	},
+	(t) => [
+		index('name_idx').on(t.name),
+		index('slug_idx').on(t.slug),
+		index('tags_idx').on(t.tags),
+		index('year_idx').on(t.year),
+	],
+)

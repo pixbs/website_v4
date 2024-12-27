@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
-import Footer from 'sections/footer'
-import Header from 'sections/header'
 import './globals.css'
 
 const onest = Onest({
@@ -23,13 +21,11 @@ function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${onest.className} bg-background-sec antialiased`}
+				className={`${onest.className} bg-gray-600 antialiased`}
 			>
-				<Header />
-				<main className='relative z-[1] tile-stroke bg-background min-h-screen'>
+				<main className='relative z-[1] min-h-screen'>
 					{children}
 				</main>
-				<Footer />
 			</body>
 		</html>
 	)

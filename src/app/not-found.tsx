@@ -1,17 +1,22 @@
+import StaggeredText from '@/components/animated/text'
 import Tiles from 'elements/tiles'
-import Hero from 'sections/hero'
+import Link from 'next/link'
 
 function NotFound() {
 	return (
-		<>
-			<Hero
-				title='404 - Page Not Found'
-				description='Sorry, that seems that this page isn’t ready yet, or doesn’t exist. Please come back later if you’re sure that this url is correct.'
-				buttonText='Go back home'
-				buttonLink='/'
-			/>
+		<section>
+			<div className='z-10 relative'>
+				<h1>
+					<StaggeredText>
+						404 - Page not found
+					</StaggeredText>
+				</h1>
+				<Link href='/'> 
+					<button>Go back</button>
+				</Link>
+			</div>
 			<Tiles />
-		</>
+		</section>
 	)
 }
 

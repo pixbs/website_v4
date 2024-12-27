@@ -4,55 +4,35 @@
 
 @layer base {
 	h1 {
-		@apply text-oneAndHalf font-bold;
+		@apply text-big font-semibold;
 	}
+
 	h2 {
-		@apply text-half font-bold leading-tile;
+		@apply text-medium font-semibold leading-tight;
 	}
+
 	h3 {
-		@apply text-third font-bold;
+		@apply text-small font-semibold leading-tight;
 	}
-	p,
-	a {
-		@apply text-fifth;
+}
+
+@layer components {
+	.base-grid {
+		@apply grid grid-cols-sm md:grid-cols-md lg:grid-cols-lg xl:grid-cols-xl;
 	}
-	body {
-		@apply bg-background text-foreground;
-	}
-	div,
-	main,
-	section,
-	header,
-	footer {
-		@apply flex flex-col;
-	}
-	input[type='text'],
-	input[type='email'] {
-		@apply bg-background appearance-none border-t-stroke border-t border-b-2 border-b-foreground mb-quarter;
-		height: calc(var(--tile-size) / 4 * 3);
-	}
+}
+
+:root {
+	@apply bg-gray-800 text-gray-000 text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl;
+	--tile-size: 7.14285714vw;
+}
+
+::selection {
+	@apply bg-brand text-gray-800;
 }
 
 ::-webkit-scrollbar {
 	position: absolute;
 	right: 0;
 	width: 0;
-}
-
-:root {
-	--tile-size: 12.5vw;
-}
-@media (min-width: 768px) {
-	:root {
-		--tile-size: 10vw;
-	}
-}
-@media (min-width: 1024px) {
-	:root {
-		--tile-size: 5.5555556vw;
-	}
-}
-
-::selection {
-	@apply bg-brand text-background;
 }
