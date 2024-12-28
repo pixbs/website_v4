@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import MarqueeSection from 'sections/marquee'
 import './globals.css'
 
 const onest = Onest({
@@ -8,9 +9,9 @@ const onest = Onest({
 
 export const metadata: Metadata = {
 	title:
-		'Dimm Kyselov | UI/UX Designer & Software Engineer Site Portfolio',
+		'Dimm Kyselov | Product Designer & Software Engineer Site Portfolio',
 	description:
-		'Dimm Kyselov is a UI/UX Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
+		'Dimm Kyselov is a Product Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
 }
 
 function RootLayout({
@@ -23,8 +24,9 @@ function RootLayout({
 			<body
 				className={`${onest.className} bg-gray-600 antialiased`}
 			>
-				<main className='relative z-[1] min-h-screen'>
+				<main className='relative z-[1] min-h-screen overflow-x-hidden before:absolute before:inset-0 before:z-10 before:border-8 before:border-gray-400 before:pointer-events-none'>
 					{children}
+					<MarqueeSection />
 				</main>
 			</body>
 		</html>

@@ -33,6 +33,7 @@ export default {
 			brand: '#F22F57',
 		},
 		fontSize: {
+			huge: 'calc(var(--tile-size) * 2)',
 			big: '4rem',
 			medium: '3.2rem',
 			small: '2rem',
