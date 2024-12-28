@@ -60,6 +60,20 @@ export default {
 				tile: 'var(--tile-size)',
 				'one-half': 'calc(var(--tile-size) * 1.5)',
 			},
+			keyframes: {
+				'move-out': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(-100%)' },
+				},
+				'move-in': {
+					'0%': { transform: 'translateY(50%)' },
+					'100%': { transform: 'translateY(0)' },
+				},
+			},
+			animation: {
+				'move-out': 'move-out 0.3s ease-out forwards',
+				'move-in': 'move-in 0.8s ease-in-out forwards',
+			},
 		},
 	},
 	plugins: [tileGridPlugin],

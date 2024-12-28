@@ -14,8 +14,10 @@ async function WorksSection() {
 						<StaggeredText>Recent work</StaggeredText>
 					</h1>
 					<p className='max-w-sm md:justify-self-end'>
-						Recent projects that I&apos;ve been working on that
-						include user-centricity, and lean approach
+						<StaggeredText duration={0.5} delay={0.5}>
+							Recent projects that I&apos;ve been working on
+							that include user-centricity, and lean approach
+						</StaggeredText>
 					</p>
 				</div>
 				<div className='grid md:grid-cols-2'>

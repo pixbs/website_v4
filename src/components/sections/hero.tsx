@@ -21,8 +21,11 @@ function HeroSection() {
 				<div className='grid md:grid-cols-2 items-center min-h-tile'>
 					<div className='h-double md:h-tile flex items-center'>
 						<p className='max-w-sm'>
-							My focus is data-driven approach, that prioritizes
-							human-centricity, and lean methodologies
+							<StaggeredText duration={0.5} delay={0.5}>
+								My focus is data-driven approach, that
+								prioritizes human-centricity, and lean
+								methodologies
+							</StaggeredText>
 						</p>
 					</div>
 					<Social className='md:justify-self-end' />

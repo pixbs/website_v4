@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
+import Loader from 'sections/loader'
 import MarqueeSection from 'sections/marquee'
 import './globals.css'
 
@@ -22,9 +23,10 @@ function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${onest.className} bg-gray-600 antialiased`}
+				className={`${onest.className} bg-gray-800 antialiased`}
 			>
-				<main className='relative z-[1] min-h-screen overflow-x-hidden before:absolute before:inset-0 before:z-10 before:border-8 before:border-gray-400 before:pointer-events-none'>
+				<Loader />
+				<main className='relative z-[1] min-h-screen overflow-x-hidden before:absolute before:inset-0 before:z-10 before:border-8 before:border-gray-400 before:pointer-events-none animate-move-in'>
 					{children}
 					<MarqueeSection />
 				</main>
