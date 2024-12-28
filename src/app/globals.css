@@ -4,7 +4,7 @@
 
 @layer base {
 	h1 {
-		@apply text-big font-semibold;
+		@apply text-small sm:text-big font-semibold;
 	}
 
 	h2 {
@@ -14,17 +14,39 @@
 	h3 {
 		@apply text-small font-semibold leading-tight;
 	}
+	section {
+		@apply relative;
+	}
 }
 
 @layer components {
 	.base-grid {
+		/* Utility class to use breakpoints of basic grid */
 		@apply grid grid-cols-sm md:grid-cols-md lg:grid-cols-lg xl:grid-cols-xl;
 	}
 }
 
 :root {
 	@apply bg-gray-800 text-gray-000 text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl;
-	--tile-size: 7.14285714vw;
+	--tile-size: 10vw;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--tile-size: 12.5vw;
+	}
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--tile-size: 7.14285714vw;
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--tile-size: 7.14285714vw;
+	}
 }
 
 ::selection {

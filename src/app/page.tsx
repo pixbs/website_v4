@@ -1,7 +1,13 @@
+import HeroSection from 'sections/hero'
 import WorksSection from 'sections/works'
 
 function Home() {
-	return <WorksSection />
+	return (
+		<>
+			<HeroSection />
+			<WorksSection />
+		</>
+	)
 }
 
 export default Home

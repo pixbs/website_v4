@@ -28,7 +28,7 @@ function Tiles() {
 				document.documentElement,
 			).getPropertyValue('--tile-size'),
 		)
-		return Math.ceil(100 / tileSize)
+		return Math.round(100 / tileSize)
 	}
 
 	const calculateInfluenceRadius = (tileSize: number) => {

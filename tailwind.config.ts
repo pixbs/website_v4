@@ -48,7 +48,16 @@ export default {
 				sm: '1fr repeat(2, 4fr) 1fr',
 				md: '1fr repeat(2, 3fr) 1fr',
 				lg: '1fr repeat(4, 3fr) 1fr',
-				xl: '1fr repeat(4, 2fr) 1fr',
+				xl: '1fr repeat(4, 3fr) 1fr',
+			},
+			// Spacing that replicates one row of the grid
+			spacing: {
+				tile: 'var(--tile-size)',
+				double: 'calc(var(--tile-size) * 2)',
+			},
+			lineHeight: {
+				tile: 'var(--tile-size)',
+				'one-half': 'calc(var(--tile-size) * 1.5)',
 			},
 		},
 	},
