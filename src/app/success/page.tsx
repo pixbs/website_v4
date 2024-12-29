@@ -1,27 +1,28 @@
 import StaggeredText from '@/components/animated/text'
-import Button from 'elements/button'
+import Social from 'elements/social'
 import Tiles from 'elements/tiles'
-import Link from 'next/link'
 
-function NotFound() {
+function Success() {
 	return (
 		<section>
 			<div className='flex flex-col px-tile py-double lg:py-tile z-10 relative gap-tile'>
-				<h1 className='text-huge font-extrabold'>
-					<StaggeredText>404</StaggeredText>
+				<h1 className='leading-tile sm:leading-tile'>
+					<StaggeredText>Success!</StaggeredText>
+					<br />
+					<StaggeredText className='text-gray-200' delay={0.1}>
+						Message recieved.
+					</StaggeredText>
 				</h1>
 				<div className='grid md:grid-cols-2 items-center min-h-tile'>
 					<div className='h-double md:h-tile flex items-center'>
 						<p className='max-w-sm'>
 							<StaggeredText duration={0.5} delay={0.5}>
-								Ops, it seems like you are lost. The page you
-								are looking for does not exist.
+								Thank you for reaching out. I will get back to
+								you as soon as possible.
 							</StaggeredText>
 						</p>
 					</div>
-					<Link href='/' className='md:justify-self-end'>
-						<Button>Go back to home</Button>
-					</Link>
+					<Social className='md:justify-self-end' />
 				</div>
 			</div>
 			<Tiles />
@@ -29,4 +30,4 @@ function NotFound() {
 	)
 }
 
-export default NotFound
+export default Success

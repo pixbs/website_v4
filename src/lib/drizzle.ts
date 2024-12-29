@@ -37,9 +37,28 @@ export const work = pgTable(
 		createdAt: timestamp('created_at').defaultNow(),
 	},
 	(t) => [
-		index('name_idx').on(t.name),
-		index('slug_idx').on(t.slug),
-		index('tags_idx').on(t.tags),
-		index('year_idx').on(t.year),
+		index('work_name_idx').on(t.name),
+		index('work_slug_idx').on(t.slug),
+		index('work_tags_idx').on(t.tags),
+		index('work_year_idx').on(t.year),
+	],
+)
+
+export const message = pgTable(
+	'message',
+	{
+		id: serial('id').primaryKey(),
+		ip: text('ip').notNull(),
+		name: text('name').notNull(),
+		email: text('email').notNull(),
+		subject: text('subject'),
+		tags: tagsEnum('tags').array().notNull(),
+		createdAt: timestamp('created_at').defaultNow(),
+	},
+	(t) => [
+		index('message_ip_idx').on(t.ip),
+		index('message_name_idx').on(t.name),
+		index('message_email_idx').on(t.email),
+		index('message_tags_idx').on(t.tags),
 	],
 )

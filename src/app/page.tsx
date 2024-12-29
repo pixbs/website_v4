@@ -1,3 +1,4 @@
+import ContactSection from 'sections/contact'
 import HeroSection from 'sections/hero'
 import MarqueeSection from 'sections/marquee'
 import WorksSection from 'sections/works'
@@ -8,6 +9,7 @@ function Home() {
 			<HeroSection />
 			<MarqueeSection />
 			<WorksSection />
+			<ContactSection />
 		</>
 	)
 }

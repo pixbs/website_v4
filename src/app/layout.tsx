@@ -1,3 +1,4 @@
+import Grid from 'elements/grid'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import Loader from 'sections/loader'
@@ -29,6 +30,7 @@ function RootLayout({
 				<main className='relative z-[1] min-h-screen overflow-x-hidden before:absolute before:inset-0 before:z-10 before:border-8 before:border-gray-400 before:pointer-events-none animate-move-in'>
 					{children}
 					<MarqueeSection />
+					<Grid />
 				</main>
 			</body>
 		</html>
