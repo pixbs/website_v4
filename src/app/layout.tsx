@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Grid from 'elements/grid'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
@@ -32,6 +34,8 @@ function RootLayout({
 					<MarqueeSection />
 					<Grid />
 				</main>
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)

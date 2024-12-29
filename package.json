@@ -11,27 +11,29 @@
 		"push": "drizzle-kit generate && drizzle-kit push"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.4.1",
 		"@vercel/postgres": "^0.10.0",
-		"drizzle-orm": "^0.36.2",
-		"motion": "^11.12.0",
+		"@vercel/speed-insights": "^1.1.0",
+		"drizzle-orm": "^0.36.4",
+		"motion": "^11.15.0",
 		"next": "15.0.3",
-		"react": "19.0.0-rc-66855b96-20241106",
-		"react-dom": "19.0.0-rc-66855b96-20241106"
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "^8.1.0",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"dotenv": "^16.4.5",
+		"@types/node": "^20.17.10",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"dotenv": "^16.4.7",
 		"drizzle-kit": "^0.28.1",
-		"eslint": "^8",
+		"eslint": "^8.57.1",
 		"eslint-config-next": "15.0.3",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
-		"postcss": "^8",
-		"prettier-plugin-tailwindcss": "^0.6.8",
-		"tailwindcss": "^3.4.1",
-		"typescript": "^5"
+		"postcss": "^8.4.49",
+		"prettier-plugin-tailwindcss": "^0.6.9",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5.7.2"
 	}
 }
