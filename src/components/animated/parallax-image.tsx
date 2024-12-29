@@ -46,9 +46,8 @@ function ParallaxImage({
 
 	return (
 		<div
-			className='flex relative bg-gray-400 aspect-square items-center justify-center'
+			className='flex relative bg-gray-600 aspect-square items-center justify-center'
 			ref={ref}
-			style={{ backgroundColor: color }}
 		>
 			<motion.div
 				style={{ y: yImage }}
