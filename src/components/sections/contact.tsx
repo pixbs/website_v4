@@ -1,27 +1,24 @@
 import ArrowD from '@/icons/base/arrow-d.svg'
-import { tagsEnum } from '@/lib/drizzle'
+import { db, message, tagsEnum } from '@/lib/drizzle'
+import Button from 'elements/button'
+import Grid from 'elements/grid'
+import Title from 'elements/title'
 import { headers } from 'next/headers'
 import { redirect } from 'next/navigation'
-import Headline from '../elements/headline'
 
-interface ContactProps {
-	title?: string
-	description?: string
-}
-
-function Contact({
-	title = "Let's collaborate",
-	description = "Have a project in mind or just want to say hi? I'd love to hear from you.",
-}: ContactProps) {
+function ContactSection() {
 	return (
-		<section
-			id='contact'
-			className='p-tile tile-stroke bg-background'
-		>
-			<Headline {...{ title, description }} />
-			<form className='flex flex-col' action={formAction}>
-				<div className='lg:flex-row gap-half lg:gap-tile pb-half lg:pb-0'>
-					<div className='w-full lg:w-full'>
+		<section id='contact' className='base-grid'>
+			<div className='col-start-2 col-end-4 lg:col-end-6 py-20'>
+				<Title
+					title="Let's collaborate"
+					description="Have a project in mind or just want to say hi? I'd love to hear from you."
+				/>
+				<form
+					className='grid gap-y-6 gap-x-20 md:grid-cols-2'
+					action={formAction}
+				>
+					<div className='flex flex-col gap-5'>
 						<Input type='text' required max='16' id='name'>
 							Your name*
 						</Input>
@@ -32,11 +29,9 @@ function Contact({
 							A sentence what is it about
 						</Input>
 					</div>
-					<div className='w-sextuple shrink-0 flex-wrap'>
-						<p className='h-half text-quarter leading-half'>
-							Im interested in:
-						</p>
-						<div className='flex-row flex-wrap gap-2'>
+					<div className='flex flex-col gap-5'>
+						<p className='py-6'>Select topics:</p>
+						<div className='flex flex-row flex-wrap gap-x-2 gap-y-6 max-w-sm'>
 							{tagsEnum.enumValues.map((tag) => (
 								<Chip
 									key={tag}
@@ -49,15 +44,13 @@ function Contact({
 							))}
 						</div>
 					</div>
-				</div>
-				<button
-					type='submit'
-					className='border-stroke h-tile gap-third flex shrink-0 flex-row items-center justify-center rounded-full border bg-background font-semibold uppercase w-full'
-				>
-					Send message
-					<ArrowD className='size-third' />
-				</button>
-			</form>
+					<Button type='submit'>
+						<span>Send message</span>
+						<ArrowD className='size-6' />
+					</Button>
+				</form>
+			</div>
+			<Grid />
 		</section>
 	)
 }
@@ -72,6 +65,7 @@ function Input(
 				{children}
 			</label>
 			<input
+				className='bg-gray-600 appearance-none border-t-gray-400 border-t border-b-2 border-b-gray-000 mb-2 py-6 placeholder:text-gray-200'
 				placeholder={
 					typeof children === 'string' ? children : ''
 				}
@@ -95,7 +89,7 @@ function Chip(
 			/>
 			<label
 				htmlFor={props.id}
-				className='rounded-full border border-backgroundSecondary bg-background px-5 py-2 font-semibold uppercase transition-colors ease-in-out hover:border-foreground peer-checked:border-brand peer-checked:bg-brand peer-checked:text-background leading-half lg:leading-quarter'
+				className='rounded-full border border-gray-200 bg-gray-600 px-5 py-2 transition-colors ease-in-out hover:border-gray-000 peer-checked:border-brand peer-checked:bg-brand peer-checked:text-background cursor-pointer'
 			>
 				{children}
 			</label>
@@ -106,9 +100,24 @@ function Chip(
 async function formAction(formData: FormData) {
 	'use server'
 	const headersList = await headers()
-	console.log('formData: ', formData)
-	console.log('ip: ', headersList.get('x-forwarded-for'))
-	redirect('/success')
+	const ip = headersList.get('x-forwarded-for')
+
+	try {
+		await db.insert(message).values({
+			ip: ip as string,
+			name: formData.get('name') as string,
+			email: formData.get('email') as string,
+			subject: formData.get('subject') as string,
+			tags: formData.getAll(
+				'tags',
+			) as typeof tagsEnum.enumValues,
+		})
+	} catch (error) {
+		console.error('Error inserting message:', error)
+		throw error
+	} finally {
+		redirect('/success')
+	}
 }
 
-export default Contact
+export default ContactSection

@@ -23,40 +23,56 @@ export default {
 	],
 	theme: {
 		colors: {
-			transparent: 'transparent',
-			foreground: 'white',
-			'foreground-sec': '#959595',
-			stroke: '#2D2D2D',
-			background: '#161616',
-			'background-sec': '#111111',
+			gray: {
+				'000': 'white',
+				200: '#959595',
+				400: '#2D2D2D',
+				600: '#161616',
+				800: '#111',
+			},
 			brand: '#F22F57',
 		},
+		fontSize: {
+			huge: 'calc(var(--tile-size) * 2)',
+			big: '4rem',
+			medium: '3.2rem',
+			small: '2rem',
+			caption: '0.7',
+			sm: '14px',
+			md: '16px',
+			lg: '18px',
+			xl: '20px',
+			'2xl': '24px',
+		},
 		extend: {
-			spacing: {
-				quarter: 'calc(var(--tile-size) / 4)',
-				third: 'calc(var(--tile-size) / 3)',
-				half: 'calc(var(--tile-size) / 2)',
-				tile: 'var(--tile-size)',
-				oneAndHalf: 'calc(var(--tile-size) * 1.5)',
-				double: 'calc(var(--tile-size) * 2)',
-				triple: 'calc(var(--tile-size) * 3)',
-				quad: 'calc(var(--tile-size) * 4)',
-				quint: 'calc(var(--tile-size) * 5)',
-				sextuple: 'calc(var(--tile-size) * 6)',
+			gridTemplateColumns: {
+				sm: '1fr repeat(2, 4fr) 1fr',
+				md: '1fr repeat(2, 3fr) 1fr',
+				lg: '1fr repeat(4, 3fr) 1fr',
+				xl: '1fr repeat(4, 3fr) 1fr',
 			},
-			fontSize: {
-				tile: 'max(12px, var(--tile-size))',
-				oneAndHalf: 'max(12px, calc(var(--tile-size) / 1.5))',
-				half: 'max(12px, calc(var(--tile-size) / 2))',
-				third: 'max(12px, calc(var(--tile-size) / 3))',
-				quarter: 'max(12px, calc(var(--tile-size) / 4))',
-				fifth: 'max(12px, calc(var(--tile-size) / 5))',
-				double: 'max(12px, calc(var(--tile-size) * 2))',
+			// Spacing that replicates one row of the grid
+			spacing: {
+				tile: 'var(--tile-size)',
+				double: 'calc(var(--tile-size) * 2)',
 			},
 			lineHeight: {
 				tile: 'var(--tile-size)',
-				half: 'calc(var(--tile-size) / 2)',
-				quarter: 'calc(var(--tile-size) / 4)',
+				'one-half': 'calc(var(--tile-size) * 1.5)',
+			},
+			keyframes: {
+				'move-out': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(-100%)' },
+				},
+				'move-in': {
+					'0%': { transform: 'translateY(50%)' },
+					'100%': { transform: 'translateY(0)' },
+				},
+			},
+			animation: {
+				'move-out': 'move-out 0.4s ease-out forwards',
+				'move-in': 'move-in 1s ease-out forwards',
 			},
 		},
 	},

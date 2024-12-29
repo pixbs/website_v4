@@ -1,7 +1,8 @@
+import Grid from 'elements/grid'
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
-import Footer from 'sections/footer'
-import Header from 'sections/header'
+import Loader from 'sections/loader'
+import MarqueeSection from 'sections/marquee'
 import './globals.css'
 
 const onest = Onest({
@@ -10,9 +11,9 @@ const onest = Onest({
 
 export const metadata: Metadata = {
 	title:
-		'Dimm Kyselov | UI/UX Designer & Software Engineer Site Portfolio',
+		'Dimm Kyselov | Product Designer & Software Engineer Site Portfolio',
 	description:
-		'Dimm Kyselov is a UI/UX Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
+		'Dimm Kyselov is a Product Designer & Software Engineer based in Berlin, Germany. He specializes in creating user interfaces and experiences for web and mobile applications.',
 }
 
 function RootLayout({
@@ -23,13 +24,14 @@ function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${onest.className} bg-background-sec antialiased`}
+				className={`${onest.className} bg-gray-800 antialiased`}
 			>
-				<Header />
-				<main className='relative z-[1] tile-stroke bg-background min-h-screen'>
+				<Loader />
+				<main className='relative z-[1] min-h-screen overflow-x-hidden before:absolute before:inset-0 before:z-10 before:border-8 before:border-gray-400 before:pointer-events-none animate-move-in'>
 					{children}
+					<MarqueeSection />
+					<Grid />
 				</main>
-				<Footer />
 			</body>
 		</html>
 	)

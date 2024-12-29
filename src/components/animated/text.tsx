@@ -35,7 +35,7 @@ function StaggeredText({
 					<motion.span
 						initial='hidden'
 						whileInView='visible'
-						viewport={{ once: true }}
+						viewport={{ once: false }}
 						transition={{
 							staggerChildren: 0.01 * duration,
 							delayChildren: index * 0.05 + delay,
