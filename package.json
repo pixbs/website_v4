@@ -11,7 +11,9 @@
 		"push": "drizzle-kit generate && drizzle-kit push"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.4.1",
 		"@vercel/postgres": "^0.10.0",
+		"@vercel/speed-insights": "^1.1.0",
 		"drizzle-orm": "^0.36.2",
 		"motion": "^11.12.0",
 		"next": "15.0.3",

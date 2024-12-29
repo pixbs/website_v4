@@ -24,9 +24,9 @@ function WorkCard({
 				backgroundImage={backgroundImage ?? undefined}
 			/>
 			<div className='flex flex-col gap-6'>
-				<h3>
+				<h2 className='text-small'>
 					<StaggeredText>{name}</StaggeredText>
-				</h3>
+				</h2>
 				<hr className=' border-gray-400 border' />
 				<div className='flex gap-4 justify-between items-center flex-wrap'>
 					<div className='flex gap-2 flex-wrap'>
