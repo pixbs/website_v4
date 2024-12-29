@@ -5,7 +5,7 @@ import StaggeredText from '../animated/text'
 function HeroSection() {
 	return (
 		<section id='hero'>
-			<div className='flex flex-col p-tile z-10 relative gap-tile'>
+			<div className='flex flex-col px-tile py-double lg:py-tile z-10 relative gap-tile'>
 				<h1 className='leading-tile sm:leading-tile'>
 					<StaggeredText>Hey I&apos;m Dimm</StaggeredText>
 					<br />

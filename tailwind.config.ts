@@ -71,8 +71,8 @@ export default {
 				},
 			},
 			animation: {
-				'move-out': 'move-out 0.3s ease-out forwards',
-				'move-in': 'move-in 0.8s ease-in-out forwards',
+				'move-out': 'move-out 0.4s ease-out forwards',
+				'move-in': 'move-in 1s ease-out forwards',
 			},
 		},
 	},
